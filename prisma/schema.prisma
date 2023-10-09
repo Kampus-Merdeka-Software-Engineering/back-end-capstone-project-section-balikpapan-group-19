@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Pengiriman {
+model pengiriman {
   id Int @id @default(autoincrement())
   kota_asal String
   kota_tujuan String
@@ -18,7 +18,7 @@ model Pengiriman {
   price Int
 }
 
-model Pelacakan {
+model pelacakan {
   Id Int @id @default(autoincrement())
   Nama String
   numberTelpon Int
