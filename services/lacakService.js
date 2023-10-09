@@ -9,9 +9,7 @@ async function getAllLacak(noresi) {
     });
     console.log(lacak)
 
-    return {
-      Pelacakan: lacak
-    };
+    return lacak
   } catch (error) {
     console.error(error);
 

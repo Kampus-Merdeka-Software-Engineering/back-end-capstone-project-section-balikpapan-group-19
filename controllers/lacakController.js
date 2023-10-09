@@ -6,7 +6,8 @@ async function getLacak(req, res)  {
   const lacak = await lacakService.getAllLacak(noresi);
 
   res.status(201).json({
-    message: 'Tracking Succeed'
+    message: 'Tracking Succeed',
+    data: lacak
   });
 }
 
