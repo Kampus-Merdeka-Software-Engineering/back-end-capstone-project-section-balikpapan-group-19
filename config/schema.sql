@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS kota (
     kota_asal VARCHAR(255) NOT NULL,
     kota_tujuan VARCHAR(255) NOT NULL, 
     berat_kg INT(11) NOT NULL,
+    price INT (11) NOT NULL
  );
 
 

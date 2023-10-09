@@ -1,11 +1,11 @@
-const { priceService } = require('../services');
+const { getpriceService } = require('../services');
 
-async function getPrice(req, res)  {
+const GET = async function getPrice(req, res)  {
   const origin = req.query.origin
   const destination = req.query.origin
   const weight = req.query.origin
 
-  const price = await priceService.getPrice(origin, destination, weight);
+  const price = await getpriceService.getPrice(origin, destination, weight);
 
   res.status(201).json({
     message: 'price created'

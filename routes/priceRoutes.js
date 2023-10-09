@@ -1,10 +1,10 @@
 const express = require('express');
+const { prisma } = require('../config/prisma');
 const { priceController} = require('../controllers');
 const router = express.Router();
 
-// get all check
-router.get('/price', priceController.getPrice);
-// router.post('/check', priceController.createTarif);
+
+priceRoutes.get('/price', priceController.getPrice);
 
 
 

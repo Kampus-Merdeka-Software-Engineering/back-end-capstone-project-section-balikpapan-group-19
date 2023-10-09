@@ -28,5 +28,5 @@ async function getPrice(origin, destination, weight) {
 
 
 module.exports = {
-  getLacakService, getlacakByIdService
+  getLacakService, getlacakByIdService, getPriceController
 };
