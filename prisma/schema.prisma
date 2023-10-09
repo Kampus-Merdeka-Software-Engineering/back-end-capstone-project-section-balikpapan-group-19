@@ -10,16 +10,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Price {
+model Pengiriman {
   id Int @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  origin String
-  destination String
-  weight Int
+  kota_asal String
+  kota_tujuan String
+  berat_kg Int
   price Int
 }
 
-model lacak {
+model Lacak {
   id Int @id @default(autoincrement())
   nama String
   numberTelpon Int
