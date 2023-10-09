@@ -15,9 +15,7 @@ async function getPriceService(origin, destination, weight) {
     console.log(basePrice)
 
     const finalPrice = basePrice.price * weight;
-    return {
-      Price: finalPrice
-    }
+    return basePrice 
   
   } catch (error) {
     console.error(error.message);

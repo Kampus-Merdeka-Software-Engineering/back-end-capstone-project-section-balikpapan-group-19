@@ -8,7 +8,8 @@ async function getPrice(req, res)  {
   const price = await priceService.getPriceService(origin, destination, weight);
 
   res.status(201).json({
-    message: 'price created'
+    message: 'price created',
+    data: price
   });
 }
 
