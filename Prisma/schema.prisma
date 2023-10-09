@@ -9,18 +9,3 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
-
-model Book {
-  id Int @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  title String
-  author String
-}
-
-model Tarif {
-  id Int @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  origin String
-  destination String
-  price Int
-}
