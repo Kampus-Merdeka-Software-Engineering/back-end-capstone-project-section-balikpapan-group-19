@@ -1,9 +1,9 @@
 --DATABASE--
 
 
-CREATE DATABASE IF NOT EXISTS `capstone`;
+CREATE DATABASE IF NOT EXISTS `pengiriman`;
 
-USE `capstone`;
+USE `pengiriman`;
 
 CREATE TABLE IF NOT EXISTS kota (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -11,15 +11,11 @@ CREATE TABLE IF NOT EXISTS kota (
     kota_tujuan VARCHAR(45) NOT NULL
  );
 
- CREATE TABLE IF NOT EXISTS tarif_pengiriman (
+ CREATE TABLE IF NOT EXISTS pengiriman (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    kota_asal VARCHAR(45) NOT NULL,
-    kota_tujuan VARCHAR(45) NOT NULL, 
-    berat_barang VARCHAR(25) NOT NULL,
-    jenis_paket VARCHAR(40) NOT NULL,
-    jenis_pengiriman VARCHAR(30) NOT NULL,
-    tarif INT NOT NULL,
-    estimasi_pengiriman VARCHAR(20) NOT NULL
+    kota_asal VARCHAR(255) NOT NULL,
+    kota_tujuan VARCHAR(255) NOT NULL, 
+    berat_kg INT(11) NOT NULL,
  );
 
 

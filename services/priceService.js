@@ -3,7 +3,7 @@ const { prisma } = require('../config/prisma');
 
 async function getPrice(origin, destination, weight) {
   try {
-    const basePrice = await prisma.tarif.findFrist({
+    const basePrice = await prisma.tarif.findFirst({
       where: {
         AND: [
           {origin: origin},
@@ -18,6 +18,7 @@ async function getPrice(origin, destination, weight) {
     return {
       Price: finalPrice
     }
+  
   } catch (error) {
     console.error(error);
 
@@ -27,5 +28,5 @@ async function getPrice(origin, destination, weight) {
 
 
 module.exports = {
-  getPrice,
+  getLacakService, getlacakByIdService
 };

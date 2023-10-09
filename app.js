@@ -19,24 +19,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// MySQL
-const pool = mysql.createPool({
-  connectionLimit : 10,
-  host            : 'localhost',
-  user            : 'root',
-  password        : 'password',
-  database        : 'pengiriman'
-})
-
-//Get All
-app.get('', (req,res) => {
-  pool.getConnection((err,connection) => {
-    if(err) throw err
-  }
-  )
-}
-
-)
 routes.forEach((route) => app.use(route));
 
 app.listen(PORT, () => {
