@@ -18,9 +18,10 @@ model Pengiriman {
   price Int
 }
 
-model Lacak {
-  id Int @id @default(autoincrement())
-  nama String
+model Pelacakan {
+  Id Int @id @default(autoincrement())
+  Nama String
   numberTelpon Int
   statusPengiriman String
+  no_resi Int
 }

@@ -26,7 +26,6 @@ async function getPriceService(origin, destination, weight) {
   }
 }
 
-
 module.exports = {
   getPriceService
 };
