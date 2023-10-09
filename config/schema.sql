@@ -20,11 +20,12 @@ CREATE TABLE IF NOT EXISTS kota (
  );
 
 
- CREATE TABLE IF NOT EXISTS tracking_paket (
-    nomor_resi INT PRIMARY KEY NOT NULL,
+ CREATE TABLE IF NOT EXISTS pelacakan (
+    id INT PRIMARY KEY NOT NULL,
     nama VARCHAR(45) NOT NULL,
-    nomor_telepon INT NOT NULL,
-    status_pengiriman VARCHAR(30) NOT NULL
+    numberTelpon INT NOT NULL,
+    statusPengiriman VARCHAR(30) NOT NULL,
+    no_resi INT (11) NOT NULL
  );
 
 

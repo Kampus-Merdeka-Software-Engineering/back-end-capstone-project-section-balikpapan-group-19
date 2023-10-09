@@ -1,10 +1,17 @@
 const { prisma } = require('../config/prisma');
 
-async function getAllLacak() {
+async function getAllLacak(noresi) {
   try {
-    const lacak = await prisma.lacak.findMany();
+    const lacak = await prisma.pelacakan.findFirst({
+      where: {
+        "no_resi": Number(noresi),
+      }
+    });
+    console.log(lacak)
 
-    return lacak;
+    return {
+      Pelacakan: lacak
+    };
   } catch (error) {
     console.error(error);
 
@@ -15,6 +22,5 @@ async function getAllLacak() {
 
 
 module.exports = {
-  getAllLacak,
-  createTarif
+  getAllLacak
 };
